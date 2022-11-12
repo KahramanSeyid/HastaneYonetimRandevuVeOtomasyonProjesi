@@ -74,7 +74,7 @@ namespace Ders48_HastaneYonetimRandevuVeOtomasyonProjesi_
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Tbl_Doktorlar set (DoktorAd=@d1,DoktorSoyad=@d2,DoktorBrans=@d3,DoktorSifre=@d5) Where DoktorTC=@d4",bgl.baglanti());
+            SqlCommand komut = new SqlCommand("Update Tbl_Doktorlar set DoktorAd=@d1,DoktorSoyad=@d2,DoktorBrans=@d3,DoktorSifre=@d5 Where DoktorTC=@d4",bgl.baglanti());
             komut.Parameters.AddWithValue("@d1", TxtAd.Text);
             komut.Parameters.AddWithValue("@d2", TxtSoyad.Text);
             komut.Parameters.AddWithValue("@d3", CmbBrans.Text);
